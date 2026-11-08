@@ -60,6 +60,10 @@ async function onSearch(event) {
 
         if (currentPage < totalPages) {
             showLoadMoreBtn();
+        } else {
+            iziToast.info({
+                message: "We're sorry, but you've reached the end of search results.",
+            });
         }
     } catch (error) {
         console.error('Search error:', error);
